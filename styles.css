@@ -1,0 +1,100 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  color: #505f58;
+  background-color: #fdfcf7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: #d8c5ae;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #21221c;
+}
+
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* Book Cards */
+.book-card {
+  background-color: #dac6b4;
+  border: 1px solid #505f58;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fdfcf7;
+}
+
+/* Reseñas Section */
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.review-card {
+  background-color: #b38972;
+  padding: 15px;
+  border: 1px solid #7e4939;
+  color: #fdfcf7;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  color: #21221c;
+}
+
+/* Responsiveness for Contact Section */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 10px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #d8c5ae;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
