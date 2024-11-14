@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publicaciones - Mónica Cazón</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos básicos para el carrito */
+    .cart {
+      margin-top: 20px;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+    }
+    .total {
+      font-weight: bold;
+      text-align: right;
+    }
+    .book-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .book-card button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .book-card button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,31 +41,56 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="http://127.0.0.1:5500/biography.html">Biografía</a></li>
-        <li><a href="http://127.0.0.1:5500/publication.html">Publicaciones</a></li>
+        <li><a href="biography.html">Biografía</a></li>
+        <li><a href="publication.html">Publicaciones</a></li>
         <li><a href="awards.html">Reconocimientos</a></li>
-        <li><a href="http://127.0.0.1:5500/contact.html">Contacto</a></li>
-        <li><a href="http://127.0.0.1:5500/rese%C3%B1a.html">Reseña</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reseña.html">Reseña</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section> 
       <h2>Publicaciones</h2>
       <div class="book-card">
         <h3>Antología de Microficción</h3>
         <p>Microrelatos - La Papa Ediciones</p>
-        <button>Comprar</button>
+        <button onclick="addToCart('Antología de Microficción', 500)">Comprar - $500</button>
       </div>
       <div class="book-card">
         <h3>Las áreas de Brodman</h3>
         <p>Poesía - Abra Pampa Ediciones</p>
-        <button>Comprar</button>
+        <button onclick="addToCart('Las áreas de Brodman', 700)">Comprar - $700</button>
+      </div>
+
+      <!-- Carrito de compras -->
+      <div class="cart">
+        <h3>Carrito de Compras</h3>
+        <div id="cart-items"></div>
+        <p class="total">Total: $<span id="total-price">0</span></p>
       </div>
     </section>
   </main>
-<footer>
-<p>&copy; 2024 Mónica Cazón</p>
+
+  <footer>
+    <p>&copy; 2024 Mónica Cazón</p>
   </footer>
+
+  <script>
+    let totalPrice = 0;
+
+    function addToCart(productName, price) {
+      // Actualiza el precio total
+      totalPrice += price;
+      document.getElementById("total-price").textContent = totalPrice;
+
+      // Muestra el producto en el carrito
+      const cartItems = document.getElementById("cart-items");
+      const item = document.createElement("p");
+      item.textContent = `${productName} - $${price}`;
+      cartItems.appendChild(item);
+    }
+  </script>
 </body>
 </html>
