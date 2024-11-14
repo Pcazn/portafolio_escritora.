@@ -13,7 +13,7 @@
 
 ## Cómo ver el sitio
 
-Este sitio está alojado en [GitHub Pages/Netlify/otra plataforma de hosting gratuita]. Puedes verlo aquí: [http://127.0.0.1:5500/index.html].
+Este sitio está alojado en [GitHub Pages/Netlify/otra plataforma de hosting gratuita]. Puedes verlo aquí: [https://pcazn.github.io/portafolio_escritora./].
 
 ## Contribuciones
 
